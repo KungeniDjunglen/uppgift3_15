@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Uppgift_2._1
 {
@@ -6,21 +6,15 @@ namespace Uppgift_2._1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hur gammla är du?");
-            int age = int.Parse(Console.ReadLine());
-            if (age <= 16)
+            Console.WriteLine("Hur länge hade du tänkt hyra bilen? timmar ");
+            int svar = int.Parse(Console.ReadLine());
+            int pris = svar * 80;
+            if (pris > 950)
             {
-                Console.WriteLine("Du är för ung");
+                pris = 950;
             }
-            else if (age >= 16 & age <= 20)
-            {
-                Console.WriteLine("Du är i rätt åldersgrupp");
-            }
-            else
-            {
-                Console.WriteLine("Du är för gammal");
-            }
-            
+            Console.WriteLine("Bilen kommer att kosta " + pris + " kronor. ");
+
         }
     }
 }
